@@ -21,7 +21,7 @@ jobs:
       - name: download image telop-tomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png"
       - name: download image temp-tomorrow
-        run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png"
+        run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png"
       - name: download image temp-aftomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png"
       - name: deploy
