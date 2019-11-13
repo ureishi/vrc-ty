@@ -15,9 +15,9 @@ jobs:
       - name: mkdir
         run: mkdir public
       - name: download image telop-today
-        run: wget -np "https://www.jma.go.jp/jp/yoho/images/000_telop_today.png"
+        run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_today.png"
       - name: download image temp-today
-        run: wget -np "https://www.jma.go.jp/jp/yoho/images/000_temp_today.png"
+        run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_today.png"
       - name: deploy
         # https://github.com/peaceiris/actions-gh-pages
         uses: peaceiris/actions-gh-pages@v2.5.0
