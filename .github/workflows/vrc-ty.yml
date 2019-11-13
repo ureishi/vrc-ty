@@ -10,7 +10,9 @@ on:
     - cron: 05 20 * * *
     - cron: 05 02 * * *
     - cron: 05 08 * * *
-
+  push:
+    branches:
+      - master
 jobs:
   download-image:
     name: download image
@@ -20,14 +22,34 @@ jobs:
         run: mkdir public
       - name: download image telop-today
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_today.png"
+      - name: Sleep for 10 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '10s'
       - name: download image temp-today
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_today.png"
+      - name: Sleep for 10 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '10s'
       - name: download image telop-tomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png"
+      - name: Sleep for 10 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '10s'
       - name: download image temp-tomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png"
+      - name: Sleep for 10 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '10s'
       - name: download image temp-aftomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png"
+      - name: Sleep for 10 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+          time: '10s'
       - name: deploy
         # https://qiita.com/syui/items/f1f2db8660cda34d8938
         # https://github.com/peaceiris/actions-gh-pages
