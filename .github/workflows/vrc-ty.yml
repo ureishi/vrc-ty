@@ -2,14 +2,14 @@
 name: vrc-tenki-yoho
 
 on:
-  # 一日2回のスケジュールを気象庁の更新に合わせて記述する
+  # 一日3回のスケジュールを気象庁の更新に合わせて記述する
   push:
     branches:
       - master
 
 jobs:
-  load-image:
-    name: load image
+  download-image:
+    name: download image
     runs-on: ubuntu-latest
     steps:
       - name: mkdir
@@ -18,6 +18,12 @@ jobs:
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_today.png"
       - name: download image temp-today
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_today.png"
+      - name: download image telop-tomorrow
+        run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png"
+      - name: download image temp-tomorrow
+        run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png"
+      - name: download image temp-aftomorrow
+        run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png"
       - name: deploy
         # https://github.com/peaceiris/actions-gh-pages
         uses: peaceiris/actions-gh-pages@v2.5.0
