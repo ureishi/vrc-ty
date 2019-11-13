@@ -11,5 +11,7 @@ Tenki Yoho for VRC_Panorama
 ** <https://ureishi.github.io/vrc-ty/000_temp_tomorrow.png>
 * 明後日の天気
 ** <https://ureishi.github.io/vrc-ty/000_telop_aftomorrow.png>
-———
-出典：気象庁ホームページ (<https://www.jma.go.jp/jp/yoho/>)
+
+---
+
+*** 出典：気象庁ホームページ (<https://www.jma.go.jp/jp/yoho/>)
