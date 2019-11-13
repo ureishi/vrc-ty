@@ -1,5 +1,5 @@
 # github pages
-name: vrc-tenki-yoho
+name: vrc-ty
 
 on:
   # 一日3回のスケジュールを気象庁の更新に合わせて記述する
