@@ -10,9 +10,6 @@ on:
     - cron: 05 20 * * *
     - cron: 05 02 * * *
     - cron: 05 08 * * *
-  push:
-    branches:
-      - master
 
 jobs:
   download-image:
