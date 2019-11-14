@@ -10,6 +10,11 @@ on:
     - cron: 05 20 * * *
     - cron: 05 02 * * *
     - cron: 05 08 * * *
+    # 上記以外の更新された時間を追加
+    # 09, 18 (JST, UTC+09)
+    # 00, 09 (GMT)
+    - cron: 05 00 * * *
+    - cron: 05 09 * * *
   push:
     branches:
       - master
