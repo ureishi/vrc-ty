@@ -2,9 +2,6 @@
 name: vrc-ty
 
 on:
-  push:
-    branches:
-      - master
   schedule:
     # 一日3回のスケジュールを気象庁の更新に合わせて記述する
     # 更新のタイミング (世界標準時に直し、+5分)
@@ -13,6 +10,9 @@ on:
     - cron: 05 20 * * *
     - cron: 05 02 * * *
     - cron: 05 08 * * *
+  push:
+    branches:
+      - master
 jobs:
   download-image:
     name: download image
