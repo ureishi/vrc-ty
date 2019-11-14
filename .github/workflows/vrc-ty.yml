@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: mkdir
         run: mkdir public
+      - name: source
+        run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
       - name: download image telop-today
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_today.png"
       - name: Sleep for 10 seconds
