@@ -2,17 +2,17 @@
 name: vrc-ty
 
 on:
-  # 一日3回のスケジュールを気象庁の更新に合わせて記述する
-  # 更新のタイミング (世界標準時に直し、+5分)
-  # 05, 11, 17 (JST, UTC+09)
-  # 20, 02, 08 (GMT)
-  schedule:
-    - cron: 05 20 * * *
-    - cron: 05 02 * * *
-    - cron: 05 08 * * *
   push:
     branches:
       - master
+  schedule:
+    # 一日3回のスケジュールを気象庁の更新に合わせて記述する
+    # 更新のタイミング (世界標準時に直し、+5分)
+    # 05, 11, 17 (JST, UTC+09)
+    # 20, 02, 08 (GMT)
+    - cron: 05 20 * * *
+    - cron: 05 02 * * *
+    - cron: 05 08 * * *
 jobs:
   download-image:
     name: download image
@@ -46,10 +46,6 @@ jobs:
           time: '10s'
       - name: download image temp-aftomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png"
-      - name: Sleep for 10 seconds
-        uses: jakejarvis/wait-action@master
-        with:
-          time: '10s'
       - name: deploy
         # https://qiita.com/syui/items/f1f2db8660cda34d8938
         # https://github.com/peaceiris/actions-gh-pages
