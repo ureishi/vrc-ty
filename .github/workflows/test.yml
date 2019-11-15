@@ -13,7 +13,7 @@ jobs:
       - name: make directory "public"
         run: mkdir public
       - name: make and write README.md
-        run: echo 'source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
+        run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
       - name: make file "url_list.txt"
         run: touch public/url_list.txt
       - name: add url of telop-today image to url_list
