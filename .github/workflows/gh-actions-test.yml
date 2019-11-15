@@ -10,4 +10,5 @@ jobs:
     name: test
     runs-on: ubuntu-latest
     steps:
+      - name: cat
         run: cat gh-actions-test.yml
