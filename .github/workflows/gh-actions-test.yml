@@ -1,0 +1,13 @@
+# github actions
+name: gh-actions-test
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  download-image:
+    name: test
+    runs-on: ubuntu-latest
+    steps:
+        run: cat gh-actions-test.yml
