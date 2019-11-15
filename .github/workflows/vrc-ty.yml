@@ -33,20 +33,20 @@ jobs:
         run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
       - name: download image telop-today
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_today.png"
-      - name: sleep for rand(20..40) seconds
-        run: sleep $(((RANDOM%20)+20))s
+      - name: sleep for rand(10..20) seconds
+        run: sleep $(((RANDOM%10)+10))s
       - name: download image temp-today
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_today.png"
-      - name: sleep for rand(20..40) seconds
-        run: sleep $(((RANDOM%20)+20))s
+      - name: sleep for rand(10..20) seconds
+        run: sleep $(((RANDOM%10)+10))s
       - name: download image telop-tomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png"
-      - name: sleep for rand(20..40) seconds
-        run: sleep $(((RANDOM%20)+20))s
+      - name: sleep for rand(10..20) seconds
+        run: sleep $(((RANDOM%10)+10))s
       - name: download image temp-tomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png"
-      - name: sleep for rand(20..40) seconds
-        run: sleep $(((RANDOM%20)+20))s
+      - name: sleep for rand(10..20) seconds
+        run: sleep $(((RANDOM%10)+10))s
       - name: download image temp-aftomorrow
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png"
       - name: deploy
