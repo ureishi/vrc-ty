@@ -1,59 +1,59 @@
---2019-11-15 10:41:23--  https://www.jma.go.jp/jp/yoho/images/000_telop_today.png
-Resolving www.jma.go.jp (www.jma.go.jp)... 23.214.54.154
-Connecting to www.jma.go.jp (www.jma.go.jp)|23.214.54.154|:443... connected.
+--2019-11-15 10:54:15--  https://www.jma.go.jp/jp/yoho/images/000_telop_today.png
+Resolving www.jma.go.jp (www.jma.go.jp)... 96.17.236.123
+Connecting to www.jma.go.jp (www.jma.go.jp)|96.17.236.123|:443... connected.
 HTTP request sent, awaiting response... 200 OK
-Length: 85584 (84K) [image/png]
+Length: 85835 (84K) [image/png]
 Saving to: ‘public/000_telop_today.png’
 
-     0K .......... .......... .......... .......... .......... 59%  696K 0s
-    50K .......... .......... .......... ...                  100% 6.37M=0.08s
+     0K .......... .......... .......... .......... .......... 59% 55.8K 1s
+    50K .......... .......... .......... ...                  100% 62.7K=1.4s
 
-2019-11-15 10:41:24 (1.06 MB/s) - ‘public/000_telop_today.png’ saved [85584/85584]
+2019-11-15 10:54:17 (58.4 KB/s) - ‘public/000_telop_today.png’ saved [85835/85835]
 
---2019-11-15 10:41:27--  https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png
+--2019-11-15 10:54:20--  https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png
 Reusing existing connection to www.jma.go.jp:443.
 HTTP request sent, awaiting response... 200 OK
-Length: 85719 (84K) [image/png]
+Length: 85979 (84K) [image/png]
 Saving to: ‘public/000_telop_tomorrow.png’
 
-     0K .......... .......... .......... .......... .......... 59% 5.04M 0s
-    50K .......... .......... .......... ...                  100% 4.49M=0.02s
+     0K .......... .......... .......... .......... .......... 59% 29.4K 1s
+    50K .......... .......... .......... ...                  100% 49.8K=2.4s
 
-2019-11-15 10:41:28 (4.80 MB/s) - ‘public/000_telop_tomorrow.png’ saved [85719/85719]
+2019-11-15 10:54:23 (35.2 KB/s) - ‘public/000_telop_tomorrow.png’ saved [85979/85979]
 
---2019-11-15 10:41:31--  https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png
+--2019-11-15 10:54:26--  https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png
 Reusing existing connection to www.jma.go.jp:443.
 HTTP request sent, awaiting response... 200 OK
-Length: 87342 (85K) [image/png]
+Length: 87589 (86K) [image/png]
 Saving to: ‘public/000_telop_aftomorrow.png’
 
-     0K .......... .......... .......... .......... .......... 58%  177K 0s
-    50K .......... .......... .......... .....                100% 9.85M=0.3s
+     0K .......... .......... .......... .......... .......... 58%  145K 0s
+    50K .......... .......... .......... .....                100%  202K=0.5s
 
-2019-11-15 10:41:31 (298 KB/s) - ‘public/000_telop_aftomorrow.png’ saved [87342/87342]
+2019-11-15 10:54:27 (164 KB/s) - ‘public/000_telop_aftomorrow.png’ saved [87589/87589]
 
---2019-11-15 10:41:34--  https://www.jma.go.jp/jp/yoho/images/000_temp_today.png
+--2019-11-15 10:54:30--  https://www.jma.go.jp/jp/yoho/images/000_temp_today.png
 Reusing existing connection to www.jma.go.jp:443.
 HTTP request sent, awaiting response... 200 OK
-Length: 73438 (72K) [image/png]
+Length: 73718 (72K) [image/png]
 Saving to: ‘public/000_temp_today.png’
 
-     0K .......... .......... .......... .......... .......... 69%  345K 0s
-    50K .......... .......... .                               100% 11.6M=0.1s
+     0K .......... .......... .......... .......... .......... 69% 94.3K 0s
+    50K .......... .......... .                               100%  124K=0.7s
 
-2019-11-15 10:41:35 (489 KB/s) - ‘public/000_temp_today.png’ saved [73438/73438]
+2019-11-15 10:54:32 (102 KB/s) - ‘public/000_temp_today.png’ saved [73718/73718]
 
---2019-11-15 10:41:38--  https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png
+--2019-11-15 10:54:35--  https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png
 Reusing existing connection to www.jma.go.jp:443.
 HTTP request sent, awaiting response... 200 OK
-Length: 92862 (91K) [image/png]
+Length: 93118 (91K) [image/png]
 Saving to: ‘public/000_temp_tomorrow.png’
 
-     0K .......... .......... .......... .......... .......... 55%  347K 0s
-    50K .......... .......... .......... ..........           100%  295K=0.3s
+     0K .......... .......... .......... .......... .......... 54% 95.0K 0s
+    50K .......... .......... .......... ..........           100%  230K=0.7s
 
-2019-11-15 10:41:39 (321 KB/s) - ‘public/000_temp_tomorrow.png’ saved [92862/92862]
+2019-11-15 10:54:36 (129 KB/s) - ‘public/000_temp_tomorrow.png’ saved [93118/93118]
 
-FINISHED --2019-11-15 10:41:39--
-Total wall clock time: 16s
-Downloaded: 5 files, 415K in 0.8s (513 KB/s)
+FINISHED --2019-11-15 10:54:36--
+Total wall clock time: 21s
+Downloaded: 5 files, 416K in 5.8s (72.4 KB/s)
