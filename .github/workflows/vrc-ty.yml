@@ -11,9 +11,9 @@ on:
     # 20, 22, 00, 02, 04, 08, 09, 10, 11, 12, 14 (GMT)
     # デーモンプロセス設定 (世界標準時)
     - cron: 00 00-08/2,09-12,14,20,22 * * *
-  push:
-    branches:
-      - master
+#  push:
+#    branches:
+#      - master
 
 jobs:
   download-image:
