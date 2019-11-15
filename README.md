@@ -1,6 +1,6 @@
 # vrc-ty
 Tenki Yoho for VRC_Panorama  
-毎日05時05分, 11時05分, 17時05分に気象庁のホームページから画像を取得します.
+毎日05時, 07時, 09時, 11時, 13時, 17時, 18時, 21時, 23時に気象庁のホームページから画像を取得します.
 * 今日の天気
 <https://ureishi.github.io/vrc-ty/000_telop_today.png>
 * 今日の気温
