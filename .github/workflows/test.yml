@@ -1,0 +1,32 @@
+# github pages
+name: test
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  download-image:
+    name: download image
+    runs-on: ubuntu-latest
+    steps:
+      - name: make directory "public"
+        run: mkdir public
+      - name: make and write README.md
+        run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
+      - name: make file "url_list.txt"
+        run: touch public/url_list.txt
+      - name: add list
+        run: echo https://www.jma.go.jp/jp/yoho/images/000_telop_today.png > public/url_list.txt
+      - name: add list
+        run: echo https://www.jma.go.jp/jp/yoho/images/000_temp_today.png >> public/url_list.txt
+      - name: download image
+        run: wget -P public -i public/url_list.txt
+      - name: deploy
+        # https://qiita.com/syui/items/f1f2db8660cda34d8938
+        # https://github.com/peaceiris/actions-gh-pages
+        uses: peaceiris/actions-gh-pages@v2.5.0
+        env:
+          ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
+          PUBLISH_BRANCH: test-branch
+          PUBLISH_DIR: public
