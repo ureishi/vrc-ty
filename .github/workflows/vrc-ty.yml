@@ -10,9 +10,9 @@ on:
     # 20, 22,  0,  2,  4,  8,  9, 10, 11, 12, 13, 14 (GMT)
     # デーモンプロセス設定 (世界標準時)
     - cron: 0 0-8/2,9-14,20,22 * * *
-  push:
-    branches:
-      - master
+#  push:
+#    branches:
+#      - master
 
 jobs:
   download-image:
@@ -20,13 +20,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: make directory, file
-        run: |
-          mkdir public
-          touch public/url_list.txt
+        run: mkdir public
       - name: make README.md
         run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
-      - name: add urls to url_list.txt
+      - name: make url list
         run: |
+          touch public/url_list.txt
           echo https://www.jma.go.jp/jp/yoho/images/000_telop_today.png      >> public/url_list.txt
           echo https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png   >> public/url_list.txt
           echo https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png >> public/url_list.txt
