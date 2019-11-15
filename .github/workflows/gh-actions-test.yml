@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: cat
-        run: cat gh-actions-test.yml
+        run: cat README.md
       - name: ls
         run: ls -la
