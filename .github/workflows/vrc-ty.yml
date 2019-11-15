@@ -9,11 +9,11 @@ on:
     # 更新が確認された時間(上記を含む)
     # 05, 07, 09, 11, 13, 17, 18, 19, 20, 21, 23 (JST, UTC+09)
     # 20, 22, 00, 02, 04, 08, 09, 10, 11, 12, 14 (GMT)
-    # デーモンプロセス設定 (世界標準時に直し、+3分)
-    - cron: 03 00-08/2,09-12,14,20,22 * * *
-#  push:
-#    branches:
-#      - master
+    # デーモンプロセス設定 (世界標準時)
+    - cron: 00 00-08/2,09-12,14,20,22 * * *
+  push:
+    branches:
+      - master
 
 jobs:
   download-image:
@@ -26,16 +26,12 @@ jobs:
         run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
       - name: make file "url_list.txt"
         run: touch public/url_list.txt
-      - name: add url of telop-today image to url_list
-        run: echo https://www.jma.go.jp/jp/yoho/images/000_telop_today.png > public/url_list.txt
-      - name: add url of telop-tomorrow image to url_list
-        run: echo https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png >> public/url_list.txt
-      - name: add url of telop-aftomorrow image to url_list
-        run: echo https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png >> public/url_list.txt
-      - name: add url of temp-today image to url_list
-        run: echo https://www.jma.go.jp/jp/yoho/images/000_temp_today.png >> public/url_list.txt
-      - name: add url of temp-tomorrow image to url_list
-        run: echo https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png >> public/url_list.txt
+      - name: add urls of image to url_list
+          echo https://www.jma.go.jp/jp/yoho/images/000_telop_today.png > public/url_list.txt
+          echo https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png >> public/url_list.txt
+          echo https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png >> public/url_list.txt
+          echo https://www.jma.go.jp/jp/yoho/images/000_temp_today.png >> public/url_list.txt
+          echo https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png >> public/url_list.txt
       - name: sleep for rand(0..120) seconds
         run: sleep $((RANDOM%120))s
       - name: download image
