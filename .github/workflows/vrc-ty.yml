@@ -27,6 +27,7 @@ jobs:
       - name: make file "url_list.txt"
         run: touch public/url_list.txt
       - name: add urls of image to url_list
+        run: |
           echo https://www.jma.go.jp/jp/yoho/images/000_telop_today.png > public/url_list.txt
           echo https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png >> public/url_list.txt
           echo https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png >> public/url_list.txt
