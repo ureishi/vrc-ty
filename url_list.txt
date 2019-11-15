@@ -1,5 +1,0 @@
-https://www.jma.go.jp/jp/yoho/images/000_telop_today.png
-https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png
-https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png
-https://www.jma.go.jp/jp/yoho/images/000_temp_today.png
-https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png
