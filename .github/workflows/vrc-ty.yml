@@ -36,7 +36,7 @@ jobs:
       - name: Sleep for 10 seconds
         uses: jakejarvis/wait-action@master
         with:
-          time: '10s'
+          time: $(((RANDOM%20)+20))s
       - name: download image temp-today
         run: wget -P public -np "https://www.jma.go.jp/jp/yoho/images/000_temp_today.png"
       - name: Sleep for 10 seconds
