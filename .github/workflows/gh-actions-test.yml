@@ -11,6 +11,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: cat
-        run: cat README.md
-      - name: ls
-        run: ls -la
+        run: cat .github/workflows/gh-actions-test.yml
+      - name: pwd
+        run: pwd
