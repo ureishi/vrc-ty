@@ -39,7 +39,9 @@ jobs:
         run: sleep $((RANDOM%120))s
       - name: download image
         # 試行回数3回 タイムアップ3秒 待機時間3秒
-        run: wget -t 3 -T 3 -w 3 -o public/log-wget.log -P public -i public/url_list.txt
+        run: wget -t 3 -T 3 -w 3 -P public -i public/url_list.txt
+      - name: delete file "url_list.txt"
+        run: rm public/url_list.txt
       - name: deploy
         # https://qiita.com/syui/items/f1f2db8660cda34d8938
         # https://github.com/peaceiris/actions-gh-pages
