@@ -12,3 +12,5 @@ jobs:
     steps:
       - name: cat
         run: cat gh-actions-test.yml
+      - name: ls
+        run: ls -la
