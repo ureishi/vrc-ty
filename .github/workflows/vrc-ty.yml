@@ -21,7 +21,7 @@ on:
     - cron: 03 14 * * *
   push:
     branches:
-      - immediate
+      - master
 jobs:
   download-image:
     name: download image
