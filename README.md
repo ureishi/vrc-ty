@@ -9,3 +9,8 @@ Tenki Yoho for VRC_Panorama
 * 明日の気温   - <https://ureishi.github.io/vrc-ty/000_temp_tomorrow.png>
 ---
 出典 : 気象庁ホームページ - <https://www.jma.go.jp/jp/yoho/>
+
+<!--
+スペース2つで改行
+2019-11-14より開始
+-->
