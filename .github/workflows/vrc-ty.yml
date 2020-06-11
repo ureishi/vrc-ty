@@ -39,13 +39,12 @@ jobs:
         run: wget -t 3 -T 3 -w 3 -P public -i public/url_list.txt
       - name: delete file
         run: rm public/url_list.txt
-      - name: deploy
+        ### DEPLOY ###
         # https://qiita.com/syui/items/f1f2db8660cda34d8938
         # https://github.com/peaceiris/actions-gh-pages
-        #uses: peaceiris/actions-gh-pages@v2.5.0
-        uses: peaceiris/actions-gh-pages@v3
+      - name: deploy
+        uses: peaceiris/actions-gh-pages@v2.5.0
         env:
           ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
-          #GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
           PUBLISH_BRANCH: gh-pages
           PUBLISH_DIR: public
