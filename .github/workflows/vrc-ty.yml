@@ -42,9 +42,10 @@ jobs:
       - name: deploy
         # https://qiita.com/syui/items/f1f2db8660cda34d8938
         # https://github.com/peaceiris/actions-gh-pages
-        uses: peaceiris/actions-gh-pages@v3
+        #uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v2.5.0
         env:
-          #ACTIONS_DEPLOY_KEY: ${{secrets.ACTIONS_DEPLOY_KEY}}
-          github_token: ${{secrets.GITHUB_TOKEN}}
+          actions_deploy_key: ${{secrets.ACTIONS_DEPLOY_KEY}}
+          #github_token: ${{secrets.GITHUB_TOKEN}}
           publish_branch: gh-pages
           publish_dir: public
