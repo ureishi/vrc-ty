@@ -42,16 +42,14 @@ jobs:
       #  run: wget -t 3 -T 3 -w 3 -P public -i public/url_list.txt
       - name: copy dummy image
         run: |
-          pwd
-          ls -al
           cp 000_dummy.png public/000_telop_today.png
           cp 000_dummy.png public/000_telop_tomorrow.png
           cp 000_dummy.png public/000_telop_aftomorrow.png
           cp 000_dummy.png public/000_temp_today.png
           cp 000_dummy.png public/000_temp_tomorrow.png
           cp 000_dummy.png public/99.png
-      - name: delete file
-        run: rm public/url_list.txt
+      #- name: delete file
+      #  run: rm public/url_list.txt
         ### DEPLOY ###
         # https://qiita.com/syui/items/f1f2db8660cda34d8938
         # https://github.com/peaceiris/actions-gh-pages
