@@ -2,7 +2,7 @@
 name: vrc-ty
 
 on:
-  schedule:
+  #schedule:
     # 気象庁が発表している更新のタイミング
     #  5, 11, 17 (JST, UTC+09)
     # 更新が確認された時間(上記を含む)
