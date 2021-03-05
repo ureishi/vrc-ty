@@ -22,22 +22,30 @@ jobs:
     steps:
       - name: make directory, file
         run: mkdir public
-      - name: make README.md
-        run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
-      - name: make url list
+      #- name: make README.md
+      #  run: echo source https://www.jma.go.jp/jp/yoho/ - Japan Meteorological Agency > public/README.md
+      #- name: make url list
+      #  run: |
+      #    touch public/url_list.txt
+      #    echo https://www.jma.go.jp/jp/yoho/images/000_telop_today.png      >> public/url_list.txt
+      #    echo https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png   >> public/url_list.txt
+      #    echo https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png >> public/url_list.txt
+      #    echo https://www.jma.go.jp/jp/yoho/images/000_temp_today.png       >> public/url_list.txt
+      #    echo https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png    >> public/url_list.txt
+      #    echo https://www.jma.go.jp/jp/warn/imgs/000/99.png                 >> public/url_list.txt
+      #- name: sleep for rand(0..120) seconds
+      #  run: sleep $((RANDOM%120))s
+      #- name: download image
+      #  # 試行回数3回 タイムアップ3秒 待機時間3秒
+      #  run: wget -t 3 -T 3 -w 3 -P public -i public/url_list.txt
+      - name: copy dummy image
         run: |
-          touch public/url_list.txt
-          echo https://www.jma.go.jp/jp/yoho/images/000_telop_today.png      >> public/url_list.txt
-          echo https://www.jma.go.jp/jp/yoho/images/000_telop_tomorrow.png   >> public/url_list.txt
-          echo https://www.jma.go.jp/jp/yoho/images/000_telop_aftomorrow.png >> public/url_list.txt
-          echo https://www.jma.go.jp/jp/yoho/images/000_temp_today.png       >> public/url_list.txt
-          echo https://www.jma.go.jp/jp/yoho/images/000_temp_tomorrow.png    >> public/url_list.txt
-          echo https://www.jma.go.jp/jp/warn/imgs/000/99.png                 >> public/url_list.txt
-      - name: sleep for rand(0..120) seconds
-        run: sleep $((RANDOM%120))s
-      - name: download image
-        # 試行回数3回 タイムアップ3秒 待機時間3秒
-        run: wget -t 3 -T 3 -w 3 -P public -i public/url_list.txt
+          cp 000_dummy.png public/000_telop_today.png     
+          cp 000_dummy.png public/000_telop_tomorrow.png  
+          cp 000_dummy.png public/000_telop_aftomorrow.png
+          cp 000_dummy.png public/000_temp_today.png      
+          cp 000_dummy.png public/000_temp_tomorrow.png   
+          cp 000_dummy.png public/99.png                
       - name: delete file
         run: rm public/url_list.txt
         ### DEPLOY ###
